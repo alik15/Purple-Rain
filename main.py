@@ -1,9 +1,8 @@
 import pygame
 
-
 pygame.init()
 size = [700, 600]
-color_for_backgroun=(169,169,169)
+color_for_background=(169,169,169)
 colour_droplet=(190,0,254)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Purple Rain")
