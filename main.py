@@ -7,8 +7,6 @@ DROPLET_HEIGHT = 50
 DROPLET_WIDTH = 3
 INITIAL_VELOCITY = 4
 ACCELERATION= 1.52
-X_POSITION = 0
-Y_POSITION = 0
 BACKGROUND_COLOR = (169,169,169)
 DROPLET_COLOR = (190,0,254)
 DROPLET_COUNT = 500
@@ -39,7 +37,6 @@ def main():
                     return
               
         screen.blit(background,(0,0))
-
         drawDroplets(droplets,screen) 
         updateDroplets(droplets,INITIAL_VELOCITY)
         displayOverlay(clock,font,screen,DROPLET_COUNT)
@@ -67,8 +64,6 @@ def updateDroplets(droplets,INITIAL_VELOCITY):
                i[1]= random.randint(-SIZE[1], 0)
                VELOCITY = INITIAL_VELOCITY
           
-          
-
 def displayOverlay(clock,font,screen,DROPLET_COUNT):
     fps = str(int(clock.get_fps()))
     fps_t = font.render(fps , 1, pygame.Color("RED"))
